@@ -1,277 +1,125 @@
-# 🚀 AstroWind
+![Blogster - Beautiful, accessible and performant Astroblog templates.](/gh-assets/gh-cover.png)
 
-<img src="https://raw.githubusercontent.com/onwidget/.github/main/resources/astrowind/lighthouse-score.png" align="right"
-     alt="AstroWind Lighthouse Score" width="100" height="358">
+<p align="center">
+    <table>
+        <tbody>
+            <td align="center">
+                <img width="2000" height="0" /><br>
+                <p align="center">
+                    <strong>Blogster<strong> is a collection of beautiful, accessible and performant blog templates built with <a href="https://astro.build">Astro</a> and <a href="https://markdoc.dev">Markdoc</a>.
+                </p>
+                <sub>
+                    Blogster is in <b>alpha</b> preview. If you have any feedback, please open a discussion or issue.<br>
+                    Follow me <a href="https://twitter.com/flexdinesh">@flexdinesh</a> on Twitter for updates.</sub><br>
+                <img width="2000" height="0" />
+            </td>
+        </tbody>
+    </table>
+</p>
 
-🌟 _Most *starred* & *forked* Astro theme in 2022 & 2023_. 🌟
+## Maintenance Status
 
-**AstroWind** is a free and open-source template to make your website using **[Astro 4.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account web best practices.
-
-- ✅ **Production-ready** scores in **PageSpeed Insights** reports.
-- ✅ Integration with **Tailwind CSS** supporting **Dark mode** and **_RTL_**.
-- ✅ **Fast and SEO friendly blog** with automatic **RSS feed**, **MDX** support, **Categories & Tags**, **Social Share**, ...
-- ✅ **Image Optimization** (using new **Astro Assets** and **Unpic** for Universal image CDN).
-- ✅ Generation of **project sitemap** based on your routes.
-- ✅ **Open Graph tags** for social media sharing.
-- ✅ **Analytics** built-in Google Analytics, and Splitbee integration.
-
-<br>
-
-<img src="https://raw.githubusercontent.com/onwidget/.github/main/resources/astrowind/screenshot-astro4.png" alt="AstroWind Theme Screenshot">
-
-[![onWidget](https://custom-icon-badges.demolab.com/badge/made%20by%20-onWidget-556bf2?style=flat-square&logo=onwidget&logoColor=white&labelColor=101827)](https://onwidget.com)
-[![License](https://img.shields.io/github/license/onwidget/astrowind?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/onwidget/astrowind/blob/main/LICENSE.md)
-[![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/onwidget)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/onwidget/astrowind#contributing)
-[![Known Vulnerabilities](https://snyk.io/test/github/onwidget/astrowind/badge.svg?style=flat-square)](https://snyk.io/test/github/onwidget/astrowind)
-[![Stars](https://img.shields.io/github/stars/onwidget/astrowind.svg?style=social&label=stars&maxAge=86400&color=ff69b4)](https://github.com/onwidget/astrowind)
-[![Forks](https://img.shields.io/github/forks/onwidget/astrowind.svg?style=social&label=forks&maxAge=86400&color=ff69b4)](https://github.com/onwidget/astrowind)
-
-<br>
-
-<details open>
-<summary>Table of Contents</summary>
-
-- [Demo](#demo)
-- [Getting started](#getting-started)
-  - [Project structure](#project-structure)
-  - [Commands](#commands)
-  - [Configuration](#configuration)
-  - [Deploy](#deploy)
-- [Frequently Asked Questions](#frequently-asked-questions)
-- [Related Projects](#related-projects)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
-- [License](#license)
-
-</details>
-
-<br>
+Blogster was built before Astro released [content collections](https://docs.astro.build/en/guides/content-collections/). With content collections, Astro now has first party built in support for strongly typed content schema and Markdoc rendered content which is what Blogster was built for. So Blogster won't receive any updates in the future. I'm going to leave this as a reference for font load strategy, meta tags and a few other best practices for setting up a website.
 
 ## Demo
 
-📌 [https://astrowind.vercel.app/](https://astrowind.vercel.app/)
+Check out the demo for each theme.
 
-<br>
+- [Demo: Sleek](https://blogster-sleek.netlify.app)
+- [Demo: Newspaper](https://blogster-newspaper.netlify.app)
+- [Demo: Bubblegum](https://blogster-bubblegum.netlify.app)
+- [Demo: Minimal](https://blogster-minimal.netlify.app)
 
-## Getting started
+## Key Features
 
-**AstroWind** tries to give you quick access to creating a website using [Astro 4.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/). It's a free theme which focuses on simplicity, good practices and high performance.
+- **Fast.** Fast by default. Astro websites are engineered to be fast and load before you could blink, even when not cached.
+- **Dark mode.** All themes have light/dark mode built-in.
+- **Mobile first.** Responsive and loads fast in all devices.
+- **Accessible.** A well thought out semantic and accessible content.
+- **Perfect lighthouse score.** 100 across the board.
+- **Easy content authoring** Author content using markdown (`.md`) from your code editor or directly in GitHub.
+- **Extended markdown with [Markdoc](https://markdoc.dev).** Type-safe custom components like YouTube embed, Twitter embed (or anything you want really) in your markdown (`.md`) files.
+- Built in **RSS** feed for you blog, excellent **SEO** and more.
 
-Very little vanilla javascript is used only to provide basic functionality so that each developer decides which framework (React, Vue, Svelte, Solid JS...) to use and how to approach their goals..
+## Get Started
 
-### Project structure
+Get started with one simple command.
 
-Inside **AstroWind** template, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   ├── _headers
-│   └── robots.txt
-├── src/
-│   ├── assets/
-│   │   ├── favicons/
-│   │   ├── images/
-│   │   └── styles/
-│   │       └── tailwind.css
-│   ├── components/
-│   │   ├── blog/
-│   │   ├── common/
-│   │   ├── ui/
-│   │   ├── widgets/
-│   │   │   ├── Header.astro
-│   │   │   └── ...
-│   │   ├── CustomStyles.astro
-│   │   ├── Favicons.astro
-│   │   └── Logo.astro
-│   ├── content/
-│   │   ├── post/
-│   │   │   ├── post-slug-1.md
-│   │   │   ├── post-slug-2.mdx
-│   │   │   └── ...
-│   │   └-- config.ts
-│   ├── layouts/
-│   │   ├── Layout.astro
-│   │   ├── MarkdownLayout.astro
-│   │   └── PageLayout.astro
-│   ├── pages/
-│   │   ├── [...blog]/
-│   │   │   ├── [category]/
-│   │   │   ├── [tag]/
-│   │   │   ├── [...page].astro
-│   │   │   └── index.astro
-│   │   ├── index.astro
-│   │   ├── 404.astro
-│   │   ├-- rss.xml.ts
-│   │   └── ...
-│   ├── utils/
-│   ├── config.yaml
-│   └── navigation.js
-├── package.json
-├── astro.config.mjs
-└── ...
+```bash
+npx create-blogster@latest --theme sleek
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Themes
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Blogster comes in a variety of themes. You can easily find one that suits and goes well with your personality. All themes are performant, accessible, SEO friendly, built with the best practices out there and have a lighthouse score of 100 across the board.
 
-Any static assets, like images, can be placed in the `public/` directory if they do not require any transformation or in the `assets/` directory if they are imported directly.
+- [Minimal](#minimal)
+- [Sleek](#sleek)
+- [Newspaper](#newspaper)
+- [Bubblegum](#bubblegum)
 
-[![Edit AstroWind on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/onwidget/astrowind/tree/main) [![Open in Gitpod](https://svgshare.com/i/xdi.svg)](https://gitpod.io/?on=gitpod#https://github.com/onwidget/astrowind) [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/onwidget/astrowind)
+### Minimal
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file `README.md`. Update `src/config.yaml` and contents. Have fun!
+A light weight theme built with plain old HTML and CSS. No external fonts or icons. Zero JavaScript. You get a full functional nice looking blog that loads super fast.
 
-<br>
+Check it out here - [Blogster minimal template](https://blogster-minimal.netlify.com).
 
-### Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command               | Action                                             |
-| :-------------------- | :------------------------------------------------- |
-| `npm install`         | Installs dependencies                              |
-| `npm run dev`         | Starts local dev server at `localhost:3000`        |
-| `npm run build`       | Build your production site to `./dist/`            |
-| `npm run preview`     | Preview your build locally, before deploying       |
-| `npm run format`      | Format codes with Prettier                         |
-| `npm run lint:eslint` | Run Eslint                                         |
-| `npm run astro ...`   | Run CLI commands like `astro add`, `astro preview` |
-
-<br>
-
-### Configuration
-
-Basic configuration file: `./src/config.yaml`
-
-```yaml
-site:
-  name: 'Example'
-  site: 'https://example.com'
-  base: '/' # Change this if you need to deploy to Github Pages, for example
-  trailingSlash: false # Generate permalinks with or without "/" at the end
-
-  googleSiteVerificationId: false # Or some value,
-
-# Default SEO metadata
-metadata:
-  title:
-    default: 'Example'
-    template: '%s — Example'
-  description: 'This is the default meta description of Example website'
-  robots:
-    index: true
-    follow: true
-  openGraph:
-    site_name: 'Example'
-    images:
-      - url: '~/assets/images/default.jpg'
-        width: 1200
-        height: 628
-    type: website
-  twitter:
-    handle: '@twitter_user'
-    site: '@twitter_user'
-    cardType: summary_large_image
-
-i18n:
-  language: en
-  textDirection: ltr
-
-apps:
-  blog:
-    isEnabled: true # If the blog will be enabled
-    postsPerPage: 6 # Number of posts per page
-
-    post:
-      isEnabled: true
-      permalink: '/blog/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
-      robots:
-        index: true
-
-    list:
-      isEnabled: true
-      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
-      robots:
-        index: true
-
-    category:
-      isEnabled: true
-      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
-      robots:
-        index: true
-
-    tag:
-      isEnabled: true
-      pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
-      robots:
-        index: false
-
-    isRelatedPostsEnabled: true # If a widget with related posts is to be displayed below each post
-    relatedPostsCount: 4 # Number of related posts to display
-
-analytics:
-  vendors:
-    googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
-
-ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+```bash
+npx create-blogster@latest --theme minimal
 ```
 
-<br>
+### Sleek
 
-### Deploy
+A beautiful, performant and accessible theme built with [Tailwind](https://tailwindcss.com).
 
-#### Deploy to production (manual)
+Check it out here - [Blogster sleek template](https://blogster-sleek.netlify.com).
 
-You can create an optimized production build with:
-
-```shell
-npm run build
+```bash
+npx create-blogster@latest --theme sleek
 ```
 
-Now, your website is ready to be deployed. All generated files are located at
-`dist` folder, which you can deploy the folder to any hosting service you
-prefer.
+### Newspaper
 
-#### Deploy to Netlify
+A beautiful, performant and accessible theme built with [Tailwind](https://tailwindcss.com).
 
-Clone this repository on own GitHub account and deploy to Netlify:
+Check it out here - [Blogster newspaper template](https://blogster-newspaper.netlify.com).
 
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/onwidget/astrowind)
+```bash
+npx create-blogster@latest --theme newspaper
+```
 
-#### Deploy to Vercel
+### Bubblegum
 
-Clone this repository on own GitHub account and deploy to Vercel:
+A beautiful, performant and accessible theme built with [Tailwind](https://tailwindcss.com).
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonwidget%2Fastrowind)
+Check it out here - [Blogster bubblegum template](https://blogster-bubblegum.netlify.com).
 
-<br>
+```bash
+npx create-blogster@latest --theme bubblegum
+```
 
-## Frequently Asked Questions
+<!-- ## Showcase
 
-- Why?
--
--
+Collections of blogs built with Blogster.
 
-<br>
+1. [dineshpandiyan.com (sleek)](https://dineshpandiyan.com)
 
-## Related projects
+Create a PR to add yours to the list. -->
 
-- [TailNext](https://tailnext.vercel.app/) - Free template using Next.js 14 and Tailwind CSS with the new App Router.
-- [Qwind](https://qwind.pages.dev/) - Free template to make your website using Qwik + Tailwind CSS.
+## FAQ
+
+<details>
+    <summary><strong>1. Why Markdoc or Why not MDX?</strong></summary>
+    <p>
+        MDX is great but when you use MDX, your MDX content is stored as code within your `.md` files. Markdoc lets you build and use your own custom components (Eg. YouTube embed, Twitter embed, Carousel, etc) within your markdown files with a special syntax. Your content is stored as text without having to leak code (imports or JSX) into your `.md` files. You can build validations, type-safety and all sorts of customisations for your custom components with Markdoc. If you're still not convinced, hear this, you can pass Markdoc content as string (just like any other string) throughout your application, store it in local storage or send it as params over the network. IMHO, Markdoc based content authoring gives you the full flexibility of markdown without the limits of the markdown syntax.
+    </p>
+</details>
 
 ## Contributing
 
-If you have any idea, suggestions or find any bugs, feel free to open a discussion, an issue or create a pull request.
-That would be very useful for all of us and we would be happy to listen and take action.
-
-## Acknowledgements
-
-Initially created by [onWidget](https://onwidget.com) and maintained by a community of [contributors](https://github.com/onwidget/astrowind/graphs/contributors).
+- When you are using `cmd+shift+F` to search for references across the repo, remember to exclude `templates/` dir because templates are auto-generated using a script and only add noise in search results.
+- Whatever you're changing, you will mostly only need to change in `themes/` or `packages/shared`. The themes in `templates/` dir is auto-synced using a script so you don't have to make any change in the `templates/` dir.
 
 ## License
 
-**AstroWind** is licensed under the MIT license — see the [LICENSE](./LICENSE.md) file for details.
+MIT © [Dinesh Pandiyan](https://github.com/flexdinesh)
