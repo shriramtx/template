@@ -1,158 +1,123 @@
-# Hugo Winston Theme
+<div align="center">
+<p><a href="https://kee.so/" target="_blank"><img src="https://i.imgur.com/x5SRUoo.png" alt="kee.so" /></a></p>
 
-Hugo Winston is a bold minimal blogging theme.
+Create now ➫ [🔗 kee.so](https://kee.so/)
 
-[Live Demo](https://hugo-winston.netlify.app/) |
-[Zerostatic Themes](https://www.zerostatic.io/)
+</div>
 
-![Hugo Winston Theme screenshot](https://www.zerostatic.io/theme/hugo-winston/hugo-winston-screenshot.png)
+---
 
-## Theme features
+<div align="center">
+<h1>Paper <sup><sup><sub>6.25</sub></sup></sup></h1>
 
-- Posts (Markdown)
-- Basic Page (Markdown)
-- SCSS (Hugo Pipelines)
-- Responsive design
-- 100/100 Google Lighthouse speed score
-- 100/100 Google Lighthouse SEO score
-- 100/100 Google Lighthouse accessibility score
-- Google analytics configured in `config.toml`
-- Configure GID using env variable HUGO_GOOGLE_ANALYTICS_ID, compatible with Netlify.
-- Title, meta description and meta tags automatically generated for every page
-- OG Meta data for Facebook and Twitter
-- Semantic HTML document structure
+Demo → [hugo-paper.vercel.app](https://hugo-paper.vercel.app/)
 
-## Installation
+A simple, clean, customizable Hugo theme.
 
-**1. Install Hugo**
+⚡️ Fast | 👒 Customizable | 🫙 Smooth
 
-To use this theme you will first need to have Hugo installed. Please follow the official [installation guide](https://gohugo.io/getting-started/installing/)
+</div>
 
-> ⚠️ **Note:** Check your Hugo version - **Hugo Extended** is required!
+## Links
 
-This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/scss-sass/) to compile SCSS and minify assets which means if you are not using the Hugo extended version this theme will not work. To check your version of Hugo, run `hugo version`. Make sure you see **/extended** after the version number, for example _Hugo Static Site Generator v0.51/extended darwin/amd64 BuildDate: unknown_ You do not need to use version v0.51 specifically, it just needs to have the _/extended_ part.
+Product Hunt: [producthunt.com/posts/hugo-paper-6](https://www.producthunt.com/posts/hugo-paper-6)
 
-**2. Create a new Hugo site**
+Hugo themes: [themes.gohugo.io/hugo-paper](https://themes.gohugo.io/hugo-paper/)
 
-This will create a fresh Hugo site in the folder `mynewsite`.
+## Overview
 
-```
-hugo new site mynewsite
-```
+![](./images/screenshot.png)
+![](./images/screenshot_dark.png)
+![](./images/screenshot_mobile.png)
+![](./images/pagespeed.png)
 
-**3. Install the theme**
+## Options
 
-Download or git clone this theme into the sites themes folder `mynewsite/themes`. You should end up with the following folder structure `mynewsite/themes/hugo-winston-theme`
-
-```
-cd mynewsite
-git clone https://github.com/zerostaticthemes/hugo-winston-theme.git themes/hugo-winston-theme
-```
-
-**4. Copy the example content**
-
-Copy the entire contents of the `mynewsite/themes/hugo-winston-theme/exampleSite/` folder to root folder of your Hugo site, ie `mynewsite/`. To copy the files using terminal, make sure you are still in the projects root, ie the `mynewsite` folder.
-
-```
-cp -a themes/hugo-winston-theme/exampleSite/. .
-```
-
-**6. Run Hugo**
-
-After installing the theme for the first time, generate the Hugo site.
-
-You run this command from the root folder of your Hugo site ie `mynewsite`
-
-```
-hugo
-```
-
-For local development run Hugo's built-in local server.
-
-```
-hugo server
-```
-
-Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
-
-# Localhost inside exampleSite
-
-You can run this site without installing it as a hugo theme using the following command. I use this for theme development.
-
-```
-hugo server --source=exampleSite --theme=../..
-```
-
-# Configuration
-
-### Config options
+Available options to `config.toml` or `hugo.toml`:
 
 ```toml
-# config.toml
+disqusShortname = 'YOUR_DISQUS_SHORTNAME'   # use disqus comments
+
 [params]
-  google_analytics_id = ""
-  twitter_handle = "@zerostaticio"
-  showAuthorOnHomepage = true
-  showAuthorOnPosts = false
-  showIntroContentOnHomepage = true
-  showPostsOnHomepage = true
-  usePaginationOnHomepage = false
-  limitPostsOnHomepage = 3 # only used if usePaginationOnHomepage is false
-  sortPostsByDateOldestFirst = false
-  addDot = true
-  addFrame = true
-  highlightColor = '#7b16ff'
-  baseColor = "#ffffff"
-  baseOffsetColor = "#eaeaea"
-  headingColor = "#1c1b1d"
-  textColor = "#4e5157"
-  dotColor = "#7b16ff"
-  enableGoogleFonts = true 
-  googleFontsUrl = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-  fontFamilyHeading = "Poppins"
-  fontFamilyParagraph = "Helvetica"
-  fontFamilyMonospace = "monospace"
+  # color style
+  color = 'linen'                           # linen, wheat, gray, light
+
+  # header social icons
+  twitter = 'YOUR_TWITTER_ID'               # twitter.com/YOUR_TWITTER_ID
+  github = 'YOUR_GITHUB_ID'                 # github.com/YOUR_GITHUB_ID
+  instagram = 'YOUR_INSTAGRAM_ID'           # instagram.com/YOUR_INSTAGRAM_ID
+  linkedin = 'YOUR_LINKEDIN_ID'             # linkedin.com/in/YOUR_LINKEDIN_ID
+  mastodon = 'YOUR_MASTODON_LINK'           # e.g. 'https://mastodon.instance/@xxx'
+  rss = true                                # show rss icon
+
+  # home page profile
+  avatar = 'GRAVATAR_EMAIL'                 # gravatar email or image url
+  name = 'YOUR_NAME'
+  bio = 'YOUR_BIO'
+
+
+  # misc
+  disableHLJS = true                        # disable highlight.js
+  disablePostNavigation = true              # disable post navigation
+  monoDarkIcon = true                       # show monochrome dark mode icon
+  gravatarCdn = 'GRAVATAR_CDN_LINK'         # e.g. 'https://cdn.v2ex.com/gravatar/'
+  math = true                               # enable KaTeX math typesetting globally
+  graphCommentId = "YOUR_GRAPH_COMMENT_ID"  # use graph comment (disqus alternative)
+
+  # giscus
+[params.giscus]
+  repo = 'YOUR_GISCUS_REPO'                 # see https://giscus.app for more details
+  repoId = 'YOUR_GISCUS_REPO_ID'
+  category = 'YOUR__GISCUS_CATEGORY'
+  categoryId = 'YOUR_GISCUS_CATEGORY_ID'
+  mapping = 'pathname'
+  theme = 'light'
+  lang = 'zh-CN'
 ```
 
-### Google Analytics
-
-Add your google analytics ID to the `config.toml`
+Available options to front matter:
 
 ```toml
-# config.toml
-[params]
-  google_analytics_id="UA-132398315-1"
+comments = false                            # disable comments for a specific page
+math = true                                 # enable KaTeX math typesetting for a specific page
 ```
 
-### Plausible Analytics
+## Install
 
-Add your plausible analytics domain to the `config.toml`.
-This is `data-domain` in your [tracking script code](https://plausible.io/docs/plausible-script).
+### As git submodule
+
+Inside the folder of your Hugo project, run:
+
+```bash
+git submodule add https://github.com/nanxiaobei/hugo-paper themes/paper
+```
+
+Open `config.toml`(or `hugo.toml`), change `theme` to `"paper"`:
 
 ```toml
-# config.toml
-[params]
-  plausible_analytics_domain = "example.com"
+theme = "paper"
 ```
 
-# Deploying to Netlify
+For more information, please read the [official guide](https://gohugo.io/getting-started/quick-start/#configure-the-site) of Hugo.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zerostaticthemes/hugo-winston-theme)
+### As hugo module
 
-This theme includes a `netlify.toml` which is [configured to deploy to Netlify](https://discourse.gohugo.io/t/deploy-your-theme-to-netlify/15508) from the `exampleSite` folder. If you have installed this theme into a new Hugo site and the exampleSite folder was copied or removed, you should delete the `netlify.toml` file.
+Add paper theme ad dependency of your site:
 
+```bash
+hugo mod init github.com/<your_user>/<your_project>
+```
 
-### More Hugo Themes by Zerostatic
+Open `config.toml`(or `hugo.toml`), remove the `theme` line (if present), add `module` section to the bottom of the file:
 
-- [Hugo Hero](https://github.com/zerostaticthemes/hugo-hero-theme) - Open-source business theme
-- [Hugo Whisper](https://github.com/zerostaticthemes/hugo-whisper-theme) - Open-source documentation theme
-- [Hugo Serif](https://github.com/zerostaticthemes/hugo-serif-theme) - Open-source business theme
-- [Hugo Winston](https://github.com/zerostaticthemes/hugo-winston-theme) - Open-source blog theme
-- [Hugo Advance](https://www.zerostatic.io/theme/hugo-advance/) - Premium advanced multi page business & marketing theme
-- [Hugo Paradigm](https://www.zerostatic.io/theme/hugo-paradigm/) - Premium landing page + site builder theme
-- [Hugo Lever](https://www.zerostatic.io/theme/hugo-lever/) - Premium personal / bio theme
-- [Hugo Shard](https://www.zerostatic.io/theme/hugo-lever/) - Premium SAAS / landing page theme
+```toml
+[module]
+  [[module.imports]]
+    path = "github.com/nanxiaobei/hugo-paper"
+```
 
-### Find hundreds more Hugo themes on Built At Lightspeed
+For more information, please read the [official guide](https://gohugo.io/hugo-modules/use-modules/#use-a-module-for-a-theme) of Hugo.
 
-[<img alt="Built At Lightspeed Hugo themes directory screenshot" width="400px" src="https://www.zerostatic.io/images/builtatlightspeed-hugo-themes.jpg" />](https://builtatlightspeed.com/category/hugo)
+## License
+
+[MIT License](https://github.com/nanxiaobei/hugo-paper/blob/main/LICENSE) (c) [nanxiaobei](https://lee.so/)

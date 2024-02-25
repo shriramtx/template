@@ -1,13 +1,18 @@
-<div class="footer">
-  {{ if .Site.Data.social.links }}
-  <div class="footer-social">
-    {{ range .Site.Data.social.links }}
-      <span class="social-icon social-icon-{{ .name | urlize }}">
-        <a href="{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener">
-          <img src="{{ .image | relURL }}" width="24" height="24" alt="{{ .name }}"/>
-        </a>
-      </span>
-    {{ end }}
+<footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; {{ now.Year }}
+    <a class="link" href="{{ `` | absURL }}">{{ site.Title }}</a>
   </div>
-  {{ end }}
-</div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
